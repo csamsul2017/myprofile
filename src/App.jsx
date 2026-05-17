@@ -1,7 +1,9 @@
 import React from 'react';
 import { FaUserLarge, FaEnvelope, FaLocationDot, FaBriefcase, FaRegUser, FaChevronDown, FaInstagram, FaTwitter, FaLinkedin, FaGithub, FaUser } from 'react-icons/fa6';
-import { LuUser, LuMail, LuMapPin, LuBriefcaseBusiness } from 'react-icons/lu';
+import { LuUser, LuMail, LuMapPin, LuBriefcaseBusiness, LuExternalLink, LuPlane } from 'react-icons/lu';
 import { html5, cssIcon, jsIcon, reactIcon, tailwindIcon, githubIcon } from './assets';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 const identities = [
   { Icon: <LuUser />, title: 'Name', value: 'Samsul', borderB: true },
@@ -18,6 +20,8 @@ const skillList = [
   { img: tailwindIcon, title: 'Tailwind CSS', value: 80 },
   { img: githubIcon, title: 'Git & Gituhub', value: 80 },
 ];
+
+const projects = [{ title: 'My Profile' }];
 
 const App = () => {
   const color = true;
@@ -108,6 +112,92 @@ const App = () => {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="py-12 bg-[#F7F8FB] px-8 flex flex-col gap-4">
+        <div className="flex flex-col gap-4">
+          <div className="flex gap-2 items-center text-2xl font-semibold">
+            <LuBriefcaseBusiness color="#7E6FFF" size={36} />
+            <h2 className="pl-2">Projects</h2>
+          </div>
+        </div>
+
+        <div className="w-full max-w-4xl mx-auto">
+          <Swiper modules={[Navigation, Pagination, Autoplay]} spaceBetween={20} slidesPerView={1.2} pagination={{ clickable: true }} className="overflow-hidden ">
+            <SwiperSlide>
+              <a href="http:/localhost:5173" target="_blank" className="block rounded-xl overflow-hidden shadow-md">
+                <div>
+                  <div>
+                    <img src="https://placehold.co/500x150" alt="" />
+                  </div>
+                  <div className="bg-white p-4 flex flex-col gap-2">
+                    <h3 className="font-semibold text-xl">Portfolio Website</h3>
+                    <div className="flex justify-between">
+                      <div className="flex gap-2 text-[#7E6FFF]">
+                        <span className="bg-[#eeecff] px-2 rounded-md">React</span>
+                        <span className="bg-[#eeecff] px-2 rounded-md">Tailwind</span>
+                      </div>
+                      <LuExternalLink />
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </SwiperSlide>
+            <SwiperSlide>
+              <a href="http:/localhost:5173" target="_blank" className="block rounded-xl overflow-hidden shadow-md">
+                <div>
+                  <div>
+                    <img src="https://placehold.co/500x150" alt="" />
+                  </div>
+                  <div className="bg-white p-4 flex flex-col gap-2">
+                    <h3 className="font-semibold text-xl">Portfolio Website</h3>
+                    <div className="flex justify-between">
+                      <div className="flex gap-2 text-[#7E6FFF]">
+                        <span className="bg-[#eeecff] px-2 rounded-md">React</span>
+                        <span className="bg-[#eeecff] px-2 rounded-md">Tailwind</span>
+                      </div>
+                      <LuExternalLink />
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </SwiperSlide>
+            <SwiperSlide>
+              <a href="http:/localhost:5173" target="_blank" className="block rounded-xl overflow-hidden shadow-md">
+                <div>
+                  <div>
+                    <img src="https://placehold.co/500x150" alt="" />
+                  </div>
+                  <div className="bg-white p-4 flex flex-col gap-2">
+                    <h3 className="font-semibold text-xl">Portfolio Website</h3>
+                    <div className="flex justify-between">
+                      <div className="flex gap-2 text-[#7E6FFF]">
+                        <span className="bg-[#eeecff] px-2 rounded-md">React</span>
+                        <span className="bg-[#eeecff] px-2 rounded-md">Tailwind</span>
+                      </div>
+                      <LuExternalLink />
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </section>
+
+      <section className="py-12 bg-[#F7F8FB] px-12">
+        <div className="border border-gray-200 rounded-3xl p-8">
+          <div className="float-left p-4 mr-8 border rounded-full text-white bg-[#7E6FFF]">
+            <LuPlane size={36} />
+          </div>
+          <span className="text-black font-semibold text-3xl block py-4">Let's Work Together!</span>
+          <p className="text-2xl">I'm always open to new opportunities and exciting projects.</p>
+          <div className="flex justify-center my-4">
+            <button className="text-white text-4xl bg-[#7E6FFF] rounded-4xl px-20 my-4 py-8 flex justify-center items-center gap-4">
+              <LuMail /> <span>Contact Me</span>
+            </button>
+          </div>
         </div>
       </section>
     </div>
