@@ -67,14 +67,14 @@ const projectList = [
     description: 'Modern landing page for business promotion',
     tags: ['React', 'Tailwind'],
     image: 'https://placehold.co/600x400/1a1a2e/7E6FFF?text=Landing+Page',
-    link: 'https://modern-bussines.samsul.dev',
+    link: 'https://modern-business.samsul.dev',
   },
   {
     title: 'Portfolio Website',
     description: 'Personal portfolio and project showcase',
     tags: ['React', 'Tailwind', 'Vite'],
     image: 'https://placehold.co/600x400/1a1a2e/7E6FFF?text=Portfolio',
-    link: '#',
+    link: 'https://samsul.dev',
   },
   {
     title: 'WPU Clone',
