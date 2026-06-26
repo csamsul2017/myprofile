@@ -23,30 +23,65 @@ const skillList = [
   { img: githubIcon, title: 'Git & GitHub', value: 70 },
 ];
 
+// const projectList = [
+//   {
+//     title: 'Ship Agency PT. Gerbang Pelabuhan Indonesia',
+//     description: 'Full-stack e-commerce solution with payment integration',
+//     tags: ['React', 'Tailwind'],
+//     image: 'https://placehold.co/600x400/1a1a2e/7E6FFF?text=Ship+Agency',
+//     link: 'https://gerbangpelabuhan.com',
+//   },
+//   {
+//     title: 'Modern Bussines Landing Page',
+//     description: 'Collaborative task management with real-time updates',
+//     tags: ['React', 'Tailwind'],
+//     image: 'https://placehold.co/600x400/1a1a2e/7E6FFF?text=Landing+Page',
+//     link: 'https://modern-bussines.samsul.dev',
+//   },
+//   {
+//     title: 'Portfolio Website',
+//     description: 'Personal portfolio showcasing projects and skills',
+//     tags: ['React', 'Tailwind', 'Vite'],
+//     image: 'https://placehold.co/600x400/1a1a2e/7E6FFF?text=Portfolio',
+//     link: '#',
+//   },
+//   {
+//     title: 'WPU Clone',
+//     description: 'Real-time weather information with beautiful UI',
+//     tags: ['React', 'Tailwind'],
+//     image: 'https://placehold.co/600x400/1a1a2e/7E6FFF?text=WPU+Clone',
+//     link: 'https://wpu-clone.samsul.dev',
+//   },
+// ];
+
 const projectList = [
   {
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce solution with payment integration',
-    tags: ['React', 'Node.js', 'MongoDB'],
-    image: 'https://placehold.co/600x400/1a1a2e/7E6FFF?text=E-Commerce',
+    title: 'Ship Agency PT. Gerbang Pelabuhan Indonesia',
+    description: 'Company profile and ship agency website',
+    tags: ['React', 'Tailwind'],
+    image: 'https://placehold.co/600x400/1a1a2e/7E6FFF?text=Ship+Agency',
+    link: 'https://gerbangpelabuhan.com',
   },
   {
-    title: 'Task Management App',
-    description: 'Collaborative task management with real-time updates',
-    tags: ['React', 'Firebase', 'Tailwind'],
-    image: 'https://placehold.co/600x400/1a1a2e/7E6FFF?text=Task+App',
+    title: 'Modern Bussines Landing Page',
+    description: 'Modern landing page for business promotion',
+    tags: ['React', 'Tailwind'],
+    image: 'https://placehold.co/600x400/1a1a2e/7E6FFF?text=Landing+Page',
+    link: 'https://modern-bussines.samsul.dev',
   },
   {
     title: 'Portfolio Website',
-    description: 'Personal portfolio showcasing projects and skills',
+    description: 'Personal portfolio and project showcase',
     tags: ['React', 'Tailwind', 'Vite'],
     image: 'https://placehold.co/600x400/1a1a2e/7E6FFF?text=Portfolio',
+    link: '#',
   },
   {
-    title: 'Weather Dashboard',
-    description: 'Real-time weather information with beautiful UI',
-    tags: ['JavaScript', 'API', 'CSS'],
-    image: 'https://placehold.co/600x400/1a1a2e/7E6FFF?text=Weather+App',
+    title: 'WPU Clone',
+    description: 'Clone of WPU landing page design',
+    tags: ['React', 'Tailwind'],
+    image: 'https://placehold.co/600x400/1a1a2e/7E6FFF?text=WPU+Clone',
+    link: 'https://wpu-clone.samsul.dev',
   },
 ];
 
@@ -127,7 +162,11 @@ const App = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-[#7E6FFF]/30 rounded-full blur-2xl scale-110" />
                 <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden ring-4 ring-[#7E6FFF]/50">
-                  <img src="https://api.dicebear.com/7.x/micah/svg?seed=samsul&backgroundColor=0a0a1a&earrings=none&hair=short02&hairColor=1a1a2e&hat=beanie&hatColor=7E6FFF&eyeType=wink&eyebrowType=default&noseType=pointed&mouthType=serious&face=%23F2E6FF&size=400" className="w-full h-full" alt="Profile" />
+                  <img
+                    src="https://api.dicebear.com/7.x/micah/svg?seed=samsul&backgroundColor=0a0a1a&earrings=none&hair=short02&hairColor=1a1a2e&hat=beanie&hatColor=7E6FFF&eyeType=wink&eyebrowType=default&noseType=pointed&mouthType=serious&face=%23F2E6FF&size=400"
+                    className="w-full h-full"
+                    alt="Profile"
+                  />
                 </div>
               </div>
             </div>
@@ -306,10 +345,10 @@ const App = () => {
           {/* Projects Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
             {projectList.map((project, index) => (
-              <a key={index} href="#" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all">
+              <a key={index} href={project.link} target="_blank" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all">
                 <div className="relative overflow-hidden">
                   <img src={project.image} alt={project.title} className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2 group-hover:text-[#7E6FFF] transition-colors">{project.title}</h3>
@@ -330,9 +369,9 @@ const App = () => {
           </div>
 
           {/* View More Button */}
-          <div className="text-center mt-12">
+          {/* <div className="text-center mt-12">
             <button className="bg-[#7E6FFF] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#6b5ce7] transition-all">View All Projects</button>
-          </div>
+          </div> */}
         </div>
       </section>
 
