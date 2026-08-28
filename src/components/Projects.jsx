@@ -33,7 +33,7 @@ const projectList = [
   {
     title: "Custom Dashboard Web App",
     description: "Modern custom dashboard web application",
-    tags: ["React", "Tailwind"],
+    tags: ["React", "Tailwind", "Express", "Zustand", "PostgreSQL"],
     image: "/dashboard-web-app.webp",
     link: "https://dashboard.samsul.dev",
   },
