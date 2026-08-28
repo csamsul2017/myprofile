@@ -30,6 +30,13 @@ const projectList = [
     image: "https://placehold.co/600x400/1a1a2e/7E6FFF?text=WPU+Clone",
     link: "https://wpu-clone.samsul.dev",
   },
+  {
+    title: "Custom Dashboard Web App",
+    description: "Modern custom dashboard web application",
+    tags: ["React", "Tailwind"],
+    image: "/dashboard-web-app.webp",
+    link: "https://dashboard.samsul.dev",
+  },
 ];
 
 const Projects = () => {
